@@ -38,6 +38,7 @@
             this.quitButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -88,6 +89,7 @@
             this.flowLayoutPanel1.Controls.Add(this.clearButton);
             this.flowLayoutPanel1.Controls.Add(this.bgButton);
             this.flowLayoutPanel1.Controls.Add(this.quitButton);
+            this.flowLayoutPanel1.Controls.Add(this.dsButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(83, 282);
@@ -143,6 +145,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dsButton
+            // 
+            this.dsButton.Location = new System.Drawing.Point(13, 3);
+            this.dsButton.Name = "dsButton";
+            this.dsButton.Size = new System.Drawing.Size(75, 23);
+            this.dsButton.TabIndex = 4;
+            this.dsButton.Text = "Dual Screen";
+            this.dsButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +183,7 @@
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button dsButton;
     }
 }
 
