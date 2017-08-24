@@ -57,5 +57,11 @@ namespace PicPresenterPlus
             else
                 pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
         }
+
+        private void dsButton_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
+        }
     }
 }
