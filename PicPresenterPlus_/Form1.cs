@@ -68,7 +68,11 @@ namespace PicPresenterPlus
             // mo to, mag-eerror. (Cannot access disposed object
             // UPDATE: Okay na. frm.Visible, frm IsDisposed -> frm new Form2,
             // then yung frm.show and frm.close na yun. Ayos. Werpa.
-                
+             
+            // Additional note: Then will I start to figure out how to show the image
+            // from Form1's PictureBox1 to Form2's PictureBox. Then kapag naka stretch
+            // yung pic sa form1, dapat nakastretch din dun sa form2.
+
             if (frm.Visible == false)
             {
                 if (frm.IsDisposed == true)
