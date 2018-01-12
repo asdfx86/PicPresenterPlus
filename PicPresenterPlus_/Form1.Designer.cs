@@ -156,7 +156,7 @@
             // 
             this.openFileDialog1.FileName = "pictureFile";
             this.openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All file" +
-                "s (*.*)|*.*  ";
+    "s (*.*)|*.*  ";
             this.openFileDialog1.Title = "Choose a picture file";
             // 
             // Form1
@@ -167,6 +167,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Pic Presenter";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

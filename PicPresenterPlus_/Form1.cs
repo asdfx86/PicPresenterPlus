@@ -12,6 +12,8 @@ namespace PicPresenterPlus
 {
     public partial class Form1 : Form
     {
+        Form2 frm = new Form2();
+
         public Form1()
         {
             InitializeComponent();
@@ -58,10 +60,32 @@ namespace PicPresenterPlus
                 pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
         }
 
+        
+
         private void dsButton_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
-            frm.Show();
+            // Medyo buggy. Pag cinlose mo yung form2, tas pinindot
+            // mo to, mag-eerror. (Cannot access disposed object
+            // UPDATE: Okay na. frm.Visible, frm IsDisposed -> frm new Form2,
+            // then yung frm.show and frm.close na yun. Ayos. Werpa.
+                
+            if (frm.Visible == false)
+            {
+                if (frm.IsDisposed == true)
+                {
+                    frm = new Form2();
+                }
+                frm.Show();
+            }
+            else
+            {
+                frm.Close();
+            }
+        }
+
+    private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
