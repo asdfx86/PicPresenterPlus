@@ -32,7 +32,9 @@ namespace PicPresenterPlus
         private void clearButton_Click(object sender, EventArgs e)
         {
             // Clear the picture.
+            pictureBox1.Image.Dispose(); // For Ram Optimization, cause RAM is a precious and scarce resource.
             pictureBox1.Image = null;
+            
         }
 
         private void bgButton_Click(object sender, EventArgs e)
