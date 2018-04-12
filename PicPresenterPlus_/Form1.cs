@@ -25,14 +25,16 @@ namespace PicPresenterPlus
             // picture that the user chose.
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Load(openFileDialog1.FileName);
+                this.pictureBox1.Load(openFileDialog1.FileName);
+                frm.pictureBox1.Image = this.pictureBox1.Image;
             }
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             // Clear the picture.
-            pictureBox1.Image.Dispose(); // For Ram Optimization, cause RAM is a precious and scarce resource.
+            if (pictureBox1.Image != null)
+                pictureBox1.Image.Dispose(); // For Ram Optimization
             pictureBox1.Image = null;
             
         }
@@ -42,7 +44,10 @@ namespace PicPresenterPlus
             // Show the color picker dialog box. If the user chooses OK, change the 
             // PictureBox control's background to the color the user chose. 
             if (colorDialog1.ShowDialog() == DialogResult.OK)
-                pictureBox1.BackColor = colorDialog1.Color;
+            {
+                this.pictureBox1.BackColor = colorDialog1.Color;
+                frm.pictureBox1.BackColor = this.pictureBox1.BackColor;
+            }
         }
 
         private void quitButton_Click(object sender, EventArgs e)
@@ -57,9 +62,15 @@ namespace PicPresenterPlus
             // If the user clears the check box, change it to "Normal".
             // Choosing Stretch shows the entire image in the available space.          
             if (checkBox1.Checked)
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            {
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                frm.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
             else
-                pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
+            {
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
+                frm.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
+            }
         }
 
         
@@ -74,6 +85,7 @@ namespace PicPresenterPlus
             // Additional note: Then will I start to figure out how to show the image
             // from Form1's PictureBox1 to Form2's PictureBox. Then kapag naka stretch
             // yung pic sa form1, dapat nakastretch din dun sa form2.
+            // UPDATE: I think I got it. Hahahahaha :)
 
             if (frm.Visible == false)
             {
@@ -81,6 +93,7 @@ namespace PicPresenterPlus
                 {
                     frm = new Form2();
                 }
+                frm.pictureBox1.Image = this.pictureBox1.Image;
                 frm.Show();
             }
             else

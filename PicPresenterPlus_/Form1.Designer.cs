@@ -182,7 +182,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button openButton;
@@ -190,6 +189,7 @@
         private System.Windows.Forms.Button bgButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Button dsButton;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

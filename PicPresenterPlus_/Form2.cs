@@ -14,6 +14,7 @@ namespace PicPresenterPlus
         public Form2()
         {
             InitializeComponent();
+
         }
     }
 }
