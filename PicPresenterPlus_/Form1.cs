@@ -36,6 +36,7 @@ namespace PicPresenterPlus
             if (pictureBox1.Image != null)
                 pictureBox1.Image.Dispose(); // For Ram Optimization
             pictureBox1.Image = null;
+            frm.pictureBox1.Image = null;
             
         }
 
@@ -64,12 +65,12 @@ namespace PicPresenterPlus
             if (checkBox1.Checked)
             {
                 this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                frm.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                frm.pictureBox1.SizeMode = this.pictureBox1.SizeMode;
             }
             else
             {
                 this.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
-                frm.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
+                frm.pictureBox1.SizeMode = this.pictureBox1.SizeMode;
             }
         }
 
@@ -81,12 +82,17 @@ namespace PicPresenterPlus
             // mo to, mag-eerror. (Cannot access disposed object
             // UPDATE: Okay na. frm.Visible, frm IsDisposed -> frm new Form2,
             // then yung frm.show and frm.close na yun. Ayos. Werpa.
-             
+
             // Additional note: Then will I start to figure out how to show the image
             // from Form1's PictureBox1 to Form2's PictureBox. Then kapag naka stretch
             // yung pic sa form1, dapat nakastretch din dun sa form2.
             // UPDATE: I think I got it. Hahahahaha :)
 
+            /* Next up:
+             * - [Check] Borderless Full screen double clicking to on form 2 [done that.]
+             * - Top Dual Screen button when already shown but covered by another window.
+             * - Context menu (right click) on form2. */
+             
             if (frm.Visible == false)
             {
                 if (frm.IsDisposed == true)
@@ -94,6 +100,7 @@ namespace PicPresenterPlus
                     frm = new Form2();
                 }
                 frm.pictureBox1.Image = this.pictureBox1.Image;
+                frm.pictureBox1.SizeMode = this.pictureBox1.SizeMode;
                 frm.Show();
             }
             else
@@ -103,6 +110,11 @@ namespace PicPresenterPlus
         }
 
     private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
 
         }
