@@ -11,28 +11,29 @@ namespace PicPresenterPlus
 {
     public partial class Form2 : Form
     {
-        // We're gonna move this somewhere else para pati yung PictureBox1 sa Form1 mag double click full screen. So, yeah.
+        // We're gonna move this somewhere else para pati yung PictureBox1 sa Form1 mag double click full screen. So, yeah. Classes.
         partial class FullScreen
         {
             public void EnterFullScreenMode(Form targetForm)
             {
+                targetForm.Text = "PicPresenter Full Screen View";
                 targetForm.WindowState = FormWindowState.Normal;
                 targetForm.FormBorderStyle = FormBorderStyle.None;
                 targetForm.WindowState = FormWindowState.Maximized;
-                targetForm.Text = "PicPresenter Full Screen View";
             }
 
             public void LeaveFullScreenMode(Form targetForm)
             {
-                targetForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-                targetForm.WindowState = FormWindowState.Normal;
                 targetForm.Text = "PicPresenter Dual Screen View";
+                targetForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+                targetForm.WindowState = FormWindowState.Normal;   
             }
 
             
         }
 
         bool FullScreenMode;
+        
 
         public Form2()
         {
@@ -61,11 +62,14 @@ namespace PicPresenterPlus
         }
 
         // Achievent Unlocked.! Yay~
+        // May quirk nga lang. Pag nakaminimize yung Form1, di gagana...
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             switch (MouseButtons)
             {
                 case MouseButtons.Right:
+                    // We should put something here to check if the open Form1 is minimized.
+                    // If minimized, restore it then bring to front.
                     Application.OpenForms["Form1"].BringToFront();
                     break;
             }

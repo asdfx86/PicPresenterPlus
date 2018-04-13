@@ -105,6 +105,7 @@ namespace PicPresenterPlus
                 frm.pictureBox1.SizeMode = this.pictureBox1.SizeMode;
                 frm.Show();
             }
+            // Experimental Code - saka na nga
             else
             {
                 frm.Close();
