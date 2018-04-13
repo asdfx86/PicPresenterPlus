@@ -19,12 +19,14 @@ namespace PicPresenterPlus
                 targetForm.WindowState = FormWindowState.Normal;
                 targetForm.FormBorderStyle = FormBorderStyle.None;
                 targetForm.WindowState = FormWindowState.Maximized;
+                targetForm.Text = "PicPresenter Full Screen View";
             }
 
             public void LeaveFullScreenMode(Form targetForm)
             {
                 targetForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
                 targetForm.WindowState = FormWindowState.Normal;
+                targetForm.Text = "PicPresenter Dual Screen View";
             }
 
             
@@ -34,7 +36,10 @@ namespace PicPresenterPlus
 
         public Form2()
         {
-            // Next up: Borderless double clicking on form 2, and context menu (right click).
+            /* Done: 
+             *  - Borderless fullscreen double clicking on form 2
+             *  - (Context menu) Right click, show Form1 on top. 
+             */
             InitializeComponent();
         }
 
@@ -55,25 +60,15 @@ namespace PicPresenterPlus
             }
         }
 
-        // Buggy...
-        /*
-        private void pictureBox1_DoubleClick(object sender, EventArgs e) // {} Balik natin to mamaya. Yung Form2.Designer.cs , ayusin din.
+        // Achievent Unlocked.! Yay~
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            bool fullScreen=false;
-            if (fullScreen != true)
+            switch (MouseButtons)
             {
-                fullScreen = true;
-                this.TopMost = true;
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                fullScreen = false;
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.WindowState = FormWindowState.Normal;
+                case MouseButtons.Right:
+                    Application.OpenForms["Form1"].BringToFront();
+                    break;
             }
         }
-        */
     }
 }

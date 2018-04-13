@@ -17,6 +17,7 @@ namespace PicPresenterPlus
         public Form1()
         {
             InitializeComponent();
+            // Lagay din kaya tayo ng ListView para drag and drop yung mga pics.
         }
 
         private void openButton_Click(object sender, EventArgs e)
@@ -91,7 +92,7 @@ namespace PicPresenterPlus
             /* Next up:
              * - [Check] Borderless Full screen double clicking to on form 2 [done that.]
              * - Top Dual Screen button when already shown but covered by another window.
-             * - Context menu (right click) on form2. */
+             * - Context menu (right click) on form2. Workaround: shown form1 on top of form2. */
              
             if (frm.Visible == false)
             {
@@ -99,6 +100,7 @@ namespace PicPresenterPlus
                 {
                     frm = new Form2();
                 }
+                frm.pictureBox1.BackColor = this.pictureBox1.BackColor;
                 frm.pictureBox1.Image = this.pictureBox1.Image;
                 frm.pictureBox1.SizeMode = this.pictureBox1.SizeMode;
                 frm.Show();
@@ -109,14 +111,14 @@ namespace PicPresenterPlus
             }
         }
 
-    private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-
+            // this.Hide(); <-- Maya maya saglit lang
         }
     }
 }
