@@ -1,6 +1,6 @@
 ﻿namespace PicPresenterPlus
 {
-    partial class Form1
+    partial class MainForm_Old
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@
             this.bgButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.dsButton = new System.Windows.Forms.Button();
+            this.nxpButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
@@ -58,7 +59,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(659, 382);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1184, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -69,7 +70,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(653, 340);
+            this.pictureBox1.Size = new System.Drawing.Size(1178, 619);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
@@ -92,17 +93,18 @@
             this.flowLayoutPanel1.Controls.Add(this.bgButton);
             this.flowLayoutPanel1.Controls.Add(this.quitButton);
             this.flowLayoutPanel1.Controls.Add(this.dsButton);
+            this.flowLayoutPanel1.Controls.Add(this.nxpButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(101, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(180, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(555, 30);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1001, 30);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // openButton
             // 
             this.openButton.AutoSize = true;
-            this.openButton.Location = new System.Drawing.Point(473, 3);
+            this.openButton.Location = new System.Drawing.Point(919, 3);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(79, 23);
             this.openButton.TabIndex = 0;
@@ -113,7 +115,7 @@
             // clearButton
             // 
             this.clearButton.AutoSize = true;
-            this.clearButton.Location = new System.Drawing.Point(390, 3);
+            this.clearButton.Location = new System.Drawing.Point(836, 3);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(77, 23);
             this.clearButton.TabIndex = 1;
@@ -124,7 +126,7 @@
             // bgButton
             // 
             this.bgButton.AutoSize = true;
-            this.bgButton.Location = new System.Drawing.Point(282, 3);
+            this.bgButton.Location = new System.Drawing.Point(728, 3);
             this.bgButton.Name = "bgButton";
             this.bgButton.Size = new System.Drawing.Size(102, 23);
             this.bgButton.TabIndex = 2;
@@ -135,7 +137,7 @@
             // quitButton
             // 
             this.quitButton.AutoSize = true;
-            this.quitButton.Location = new System.Drawing.Point(201, 3);
+            this.quitButton.Location = new System.Drawing.Point(647, 3);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(75, 23);
             this.quitButton.TabIndex = 3;
@@ -145,13 +147,23 @@
             // 
             // dsButton
             // 
-            this.dsButton.Location = new System.Drawing.Point(120, 3);
+            this.dsButton.Location = new System.Drawing.Point(566, 3);
             this.dsButton.Name = "dsButton";
             this.dsButton.Size = new System.Drawing.Size(75, 23);
             this.dsButton.TabIndex = 4;
             this.dsButton.Text = "Dual Screen";
             this.dsButton.UseVisualStyleBackColor = true;
             this.dsButton.Click += new System.EventHandler(this.dsButton_Click);
+            // 
+            // nxpButton
+            // 
+            this.nxpButton.Location = new System.Drawing.Point(485, 3);
+            this.nxpButton.Name = "nxpButton";
+            this.nxpButton.Size = new System.Drawing.Size(75, 23);
+            this.nxpButton.TabIndex = 5;
+            this.nxpButton.Text = "New UI";
+            this.nxpButton.UseVisualStyleBackColor = true;
+            this.nxpButton.Click += new System.EventHandler(this.nxpButton_Click);
             // 
             // openFileDialog1
             // 
@@ -160,14 +172,15 @@
     "s (*.*)|*.*  ";
             this.openFileDialog1.Title = "Choose a picture file";
             // 
-            // Form1
+            // MainForm_Old
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 382);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
-            this.Text = "Pic Presenter";
+            this.Name = "MainForm_Old";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pic Presenter+ Classic";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -191,6 +204,7 @@
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.Button dsButton;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button nxpButton;
     }
 }
 

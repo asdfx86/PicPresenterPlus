@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace PicPresenterPlus
 {
-    public partial class Form1 : Form
+    public partial class MainForm_Old : Form
     {
-        Form2 frm = new Form2();
+        DS_View frm = new DS_View();
+        NewMainForm nxp = new NewMainForm();
 
-        public Form1()
+        public MainForm_Old()
         {
             InitializeComponent();
             // Lagay din kaya tayo ng ListView para drag and drop yung mga pics.
@@ -98,7 +99,7 @@ namespace PicPresenterPlus
             {
                 if (frm.IsDisposed == true)
                 {
-                    frm = new Form2();
+                    frm = new DS_View();
                 }
                 frm.pictureBox1.BackColor = this.pictureBox1.BackColor;
                 frm.pictureBox1.Image = this.pictureBox1.Image;
@@ -120,6 +121,21 @@ namespace PicPresenterPlus
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             // this.Hide(); <-- Maya maya saglit lang
+        }
+
+        private void nxpButton_Click(object sender, EventArgs e)
+        {
+            if (!nxp.Visible)
+            {
+                if (nxp.IsDisposed) nxp = new NewMainForm();
+                nxp.Show();
+            }
+            else
+            {
+                nxp.Close();
+                nxp.Dispose();
+            }
+
         }
     }
 }

@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace PicPresenterPlus
 {
-    public partial class Form2 : Form
+    public partial class DS_View : Form
     {
         // We're gonna move this somewhere else para pati yung PictureBox1 sa Form1 mag double click full screen. So, yeah. Classes.
         partial class FullScreen
         {
             public void EnterFullScreenMode(Form targetForm)
             {
-                targetForm.Text = "PicPresenter Full Screen View";
+                targetForm.Text = "Full Screen Program Output";
                 targetForm.WindowState = FormWindowState.Normal;
                 targetForm.FormBorderStyle = FormBorderStyle.None;
                 targetForm.WindowState = FormWindowState.Maximized;
@@ -24,7 +24,7 @@ namespace PicPresenterPlus
 
             public void LeaveFullScreenMode(Form targetForm)
             {
-                targetForm.Text = "PicPresenter Dual Screen View";
+                targetForm.Text = "PicPresenter+ Program Output";
                 targetForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
                 targetForm.WindowState = FormWindowState.Normal;   
             }
@@ -35,7 +35,7 @@ namespace PicPresenterPlus
         bool FullScreenMode;
         
 
-        public Form2()
+        public DS_View()
         {
             /* Done: 
              *  - Borderless fullscreen double clicking on form 2
