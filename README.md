@@ -1,7 +1,6 @@
 # Introduction
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
-
 Just a little project I'm making.. An extension of the Picture Viewer Tutorial available on [MSDN](https://msdn.microsoft.com/en-us/library/dd492135.aspx). Added features include Dual Screen View.
+EDIT 2023: This project has been in the backburner for years, yet the vision still remains. Hopefully we can continue working on this once we're better off.
 
 # What I've Done So Far
 - Dual Screen View on another form.
@@ -19,14 +18,10 @@ TODO: Guide users through getting your code up and running on their own system. 
 2.	Software dependencies
 3.	Latest releases
 4.	API references
+5.	** coming soon... **
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+TODO: ** coming soon... ** 
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+TODO: ** coming soon... **
