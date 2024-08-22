@@ -12,6 +12,8 @@ Just a little project I'm making.. An extension of the Picture Viewer Tutorial a
 - Graphics, styled text (outline, shadow, gradient fill, glow, 3D, etc...)
 - Gapless audio, seamless playback...
 - Eventually, I plan to make this program into a fully-fledged broadcast-grade multimedia presentation software for use in the home, church, and school. The workplace and businesses has had too much of their technology love, so we're catering a prosumer market.
+## The Future - 2024 Update
+Portions of this code will be selected as a candidate for the av-mpc project as being internally conceptualized.
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
